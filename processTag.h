@@ -1,9 +1,10 @@
-// Fib.h - header file: this should be included in any source file that needs fib()
-
 #ifndef _tag
 #define _tag
+namespace EDWIAN004 {
+void readFile(std::string filename);
 
-int tag(int n);   // a function "prototype" - tells compiler all about fib() 
-                  //  Note that it has no fn body!
+void createStruct(char line[100]);
 
+void stackRead(std::string filename);
 #endif
+}

@@ -4,8 +4,8 @@ CC=g++         # the compiler
 LIBS=-lm       # the libraries we will ref
 
 # object files to create .exe
-tags: tag.o driver.o
-	$(CC) tag.o driver.o -o tag.exe $(LIBS)
+tags: processTag.o driver.o
+	$(CC) processTag.o driver.o -o tag.exe $(LIBS)
 
 # Implicit pattern rule for compiling object files
 %.o : %.cpp   # $< is the first dependancy and $@ is the target
