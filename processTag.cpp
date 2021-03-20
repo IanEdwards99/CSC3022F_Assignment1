@@ -107,3 +107,14 @@ void EDWIAN004::writeFile(std::vector<tagStruct> vect, std::string filename){
    }
    myFile.close();
 }
+
+void EDWIAN004::outputTag(std::vector<tagStruct> vect, std::string tagName){
+   for (auto it = begin (vect); it != end (vect); ++it) {
+      if (it->tagname == tagName){
+         cout << it->tagname<< ", ";
+         cout << it->nrPairs << ", ";
+         cout << it-> tagText << endl;
+         break;
+      }
+   }
+}

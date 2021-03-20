@@ -16,9 +16,11 @@ void createStruct(char line[100]);
 
 std::vector<tagStruct> stackRead(std::string filename);
 
-void displayVect(std::vector<tagStruct>);
+void displayVect(std::vector<tagStruct> vect);
 
-void writeFile(std::vector<tagStruct>);
+void writeFile(std::vector<tagStruct> vect, std::string filename);
+
+void EDWIAN004::outputTag(std::vector<tagStruct> vect, std::string tagName);
 
 #endif
 }

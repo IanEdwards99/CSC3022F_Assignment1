@@ -36,10 +36,16 @@ int main (void)
 			EDWIAN004::displayVect(vect);
 		}
 		else if (input == "d"){
-			std::cout << "Writing...\n" << std::endl;
-			
+			std::cout << "Enter filename to write to:" << std::endl;
+			std::cin >> input;
+			EDWIAN004::writeFile(vect, input);
 		}
-		else if (input == "l") {std::cout << "Listing...\n" << std::endl;}
+		else if (input == "l") {
+			std::cout << "Enter a tag name to output:" << std::endl;
+			std::string tagName;
+			std::cin >> tagName;
+			EDWIAN004::outputTag(vect, tagName);
+		}
 
 		cout << "c: Clear display.\nr: Read and process tag file\np: Print all tags\nd: Write tags\nl: List tags\nq: Quit\n\nEnter an option (r,p,d,l) or q to quit, and press return..." << std::endl;
 		cin >>input;
