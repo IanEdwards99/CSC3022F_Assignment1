@@ -11,6 +11,7 @@ processTag.h is the header file that defines the functions and structures used.
 Compile program with "make". Run program with "./tag.exe"
 
 Choose operations from the list of options presented in program ("c", "r", "p", "w", "l", "q")
+
 "c" : This option clears the menu and redisplays the menu.
 "r" : Enter the filename to be read, including its file extension.
 "p" : Will print out vector contents of read tag file.
