@@ -5,8 +5,11 @@ Tag sorting and storing C++ introductory assignment.
 Program notes:
 
 Place textfiles to be read in the directory of the driver file.
+
 driver.cpp is the driver program with a main method that has the code to call the sourcefile functions, and implements an infinite while-loop continuously presenting a menu to the user.
+
 processTag.cpp is the sourcefile with functions to read the contents of the tag file, print it out, write it out to a file and list a specified tag and its details.
+
 processTag.h is the header file that defines the functions and structures used.
 
 Compile program with "make". Run program with "./tag.exe"
