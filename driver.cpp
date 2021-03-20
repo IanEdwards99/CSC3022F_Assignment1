@@ -3,9 +3,16 @@
 #include <string>
 #include <cstdlib>
 
+// struct tagStruct {
+//    std::string tagname;
+//    int nrPairs;
+//    std::string tagText;
+// };
+
 int main (void)
 {
 	using namespace std;  
+	vector<tagStruct> vect;
 
 	cout << "c: Clear display.\nr: Read and process tag file\np: Print all tags\nd: Write tags\nl: List tags\nq: Quit\n\nEnter an option (r,p,d,l) or q to quit, and press return..." << std::endl;
 	string input;
@@ -19,13 +26,19 @@ int main (void)
 	while (input != "q") {
 		if (input == "c"){system("clear");}
 		else if (input == "r"){
-			std::cout << "Enter a filename...\n" << std::endl;
+			std::cout << "Enter a filename..." << std::endl;
 			string file;
 			std::cin >> file;
-			EDWIAN004::stackRead(file);
+			vect = EDWIAN004::stackRead(file);
 		}
-		else if (input == "p"){std::cout << "Printing...\n" << std::endl;}
-		else if (input == "d"){std::cout << "Writing...\n" << std::endl;}
+		else if (input == "p"){
+			std::cout << "Printing..." << std::endl;
+			EDWIAN004::displayVect(vect);
+		}
+		else if (input == "d"){
+			std::cout << "Writing...\n" << std::endl;
+			
+		}
 		else if (input == "l") {std::cout << "Listing...\n" << std::endl;}
 
 		cout << "c: Clear display.\nr: Read and process tag file\np: Print all tags\nd: Write tags\nl: List tags\nq: Quit\n\nEnter an option (r,p,d,l) or q to quit, and press return..." << std::endl;
