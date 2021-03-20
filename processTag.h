@@ -20,7 +20,7 @@ void displayVect(std::vector<tagStruct> vect);
 
 void writeFile(std::vector<tagStruct> vect, std::string filename);
 
-void EDWIAN004::outputTag(std::vector<tagStruct> vect, std::string tagName);
+void outputTag(std::vector<tagStruct> vect, std::string tagName);
 
 #endif
 }

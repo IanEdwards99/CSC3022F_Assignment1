@@ -85,6 +85,7 @@ std::vector<tagStruct> EDWIAN004::stackRead(std::string filename){
          }
       }
       ifs.close();
+      cout << "File read successfully." << endl;
    }
    return vect;
 }
@@ -106,6 +107,7 @@ void EDWIAN004::writeFile(std::vector<tagStruct> vect, std::string filename){
       myFile << it-> tagText << endl;
    }
    myFile.close();
+   cout << "File written successfully." << endl;
 }
 
 void EDWIAN004::outputTag(std::vector<tagStruct> vect, std::string tagName){

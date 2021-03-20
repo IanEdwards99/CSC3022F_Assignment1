@@ -17,11 +17,6 @@ int main (void)
 	cout << "c: Clear display.\nr: Read and process tag file\np: Print all tags\nd: Write tags\nl: List tags\nq: Quit\n\nEnter an option (r,p,d,l) or q to quit, and press return..." << std::endl;
 	string input;
 	cin >> input; //can also use input = cin.get(); reads next character.
-	
-	string name = "my little pony";
-	for (int i = 0; i <= 10; i++){
-		cout << name[i];
-	}
 
 	while (input != "q") {
 		if (input == "c"){system("clear");}
@@ -32,7 +27,7 @@ int main (void)
 			vect = EDWIAN004::stackRead(file);
 		}
 		else if (input == "p"){
-			std::cout << "Printing..." << std::endl;
+			std::cout << "Printing tags..." << std::endl;
 			EDWIAN004::displayVect(vect);
 		}
 		else if (input == "d"){
@@ -46,6 +41,7 @@ int main (void)
 			std::cin >> tagName;
 			EDWIAN004::outputTag(vect, tagName);
 		}
+		else std::cout << "Incorrect option selected. Please choose an option from below:\n" << endl;
 
 		cout << "c: Clear display.\nr: Read and process tag file\np: Print all tags\nd: Write tags\nl: List tags\nq: Quit\n\nEnter an option (r,p,d,l) or q to quit, and press return..." << std::endl;
 		cin >>input;
