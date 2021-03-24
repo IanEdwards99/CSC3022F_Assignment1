@@ -1,13 +1,9 @@
+//Author: Ian Edwards EDWIAN004
+//Driver file for C++ program which calls the processTag sourcefile functions.
 #include <iostream>   //a system header file - needed to do simple I/O
 #include "processTag.h"	         // our header file - contains decl of fib()
 #include <string>
 #include <cstdlib>
-
-// struct tagStruct {
-//    std::string tagname;
-//    int nrPairs;
-//    std::string tagText;
-// };
 
 int main (void)
 {
@@ -18,24 +14,24 @@ int main (void)
 	string input;
 	cin >> input; //can also use input = cin.get(); reads next character.
 
-	while (input != "q") {
-		if (input == "c"){system("clear");}
-		else if (input == "r"){
+	while (input != "q") { //quit if q is entered.
+		if (input == "c"){system("clear");} //clear if c is entered
+		else if (input == "r"){	//read in a file's tags and details into the vector declared previously.
 			std::cout << "Enter a filename..." << std::endl;
 			string file;
 			std::cin >> file;
 			vect = EDWIAN004::stackRead(file);
 		}
-		else if (input == "p"){
+		else if (input == "p"){ //print all the tags in the vector read in by "r"
 			std::cout << "Printing tags..." << std::endl;
 			EDWIAN004::displayVect(vect);
 		}
-		else if (input == "d"){
+		else if (input == "d"){ //output vector contents to a textfile.
 			std::cout << "Enter filename to write to:" << std::endl;
 			std::cin >> input;
 			EDWIAN004::writeFile(vect, input);
 		}
-		else if (input == "l") {
+		else if (input == "l") { //Find a tag name in the vector
 			std::cout << "Enter a tag name to output:" << std::endl;
 			std::string tagName;
 			std::cin >> tagName;

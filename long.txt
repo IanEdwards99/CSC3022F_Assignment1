@@ -1,6 +1,4 @@
-<head>
 <title>Long Example</title>
-</head>
 <h1>Heading</h1>
 <li>Item 1</li>
 <li>Item 2</li>

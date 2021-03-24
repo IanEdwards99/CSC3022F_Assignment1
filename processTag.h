@@ -1,7 +1,10 @@
+//Author: Ian Edwards EDWIAN004
+//Basic headerfile for C++ program for processTag.cpp
+
 #ifndef _tag
 #define _tag
 
-struct tagStruct {
+struct tagStruct { //Structure used in driver file and sourcefile.
    std::string tagname;
    int nrPairs;
    std::string tagText;
@@ -10,6 +13,7 @@ struct tagStruct {
 #include <vector>
 
 namespace EDWIAN004 {
+//All function declarations are included below:
 void readFile(std::string filename);
 
 void createStruct(char line[100]);

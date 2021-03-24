@@ -3,10 +3,10 @@
 <lines>
 
 
-SOME TEXT HERE
+lines
 
 
-<lines>
+</lines>
 <tabs>
 some
 	tabbed
